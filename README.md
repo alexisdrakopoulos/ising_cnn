@@ -10,7 +10,7 @@ Please keep in mind this project was made in mind with utilizing AWS infrastruct
 
 ## How to Run Basics
 
-Nothing in `code` directory needs to be directly touched/changed. Everything that you should need can be called from two scripts, `generate_systems.py`  and `main_gpu.py` . The former generates systems using MCMC, and can prepare synthetic Ising systems with the latter being used for training. Inference and evaluation of the CNN models does need access to `code/run_predictions.py`.
+Nothing in `code` directory needs to be directly touched/changed other than the `config.ini`. Everything that you should need can be called from two scripts, `generate_systems.py`  and `main_gpu.py`. The former generates systems using MCMC, and can prepare synthetic Ising systems with the latter being used for training. Inference and evaluation of the CNN models does need access to `code/run_predictions.py`.
 
 Examples of how to call these would be:
 
@@ -34,7 +34,7 @@ This section discusses the `config.ini` file, as well as the folder structure th
 
 ### Config File
 
-All module paths are configured using the `config.ini` file, as well as calling AWS S3.
+All module paths are configured using the `config.ini` file, as well as calling AWS S3. The config file needs to be updated, as currently the path points to `C:/Users/alexi/Desktop/deep_regression_new` with a commented out path for the Ubuntu DLAMI. You also need to change the `s3_bucket: ` from `HIDDEN` to your bucket if you wish to use the backup functionality in the `utils.py` module.
 
 ### Dependencies
 
