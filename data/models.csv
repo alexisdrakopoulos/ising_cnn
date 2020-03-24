@@ -1,0 +1,11 @@
+﻿GPU,Iteration,Model Type,Activation,Optimizer,Dropout,Batchnorm,Batchnorm Order,Batch Size,Learning Rate,Training Size,Shallow Network
+0,100,regression,relu,adam,0,FALSE,after,128,0.0002,1000,FALSE
+0,101,classification,relu,adam,0,FALSE,after,128,0.0001,1000,FALSE
+0,102,regression,relu,adam,0,FALSE,after,128,0.0002,2000,FALSE
+0,103,classification,relu,adam,0,FALSE,after,128,0.0001,2000,FALSE
+0,104,regression,relu,adam,0,FALSE,after,128,0.0002,3000,FALSE
+0,105,classification,relu,adam,0,FALSE,after,128,0.0001,3000,FALSE
+0,106,regression,relu,adam,0,FALSE,after,128,0.0002,4000,FALSE
+0,107,classification,relu,adam,0,FALSE,after,128,0.0001,4000,FALSE
+0,108,regression,relu,adam,0,FALSE,after,128,0.0002,5000,FALSE
+0,109,classification,relu,adam,0,FALSE,after,128,0.0001,5000,FALSE
