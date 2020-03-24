@@ -45,7 +45,6 @@ The deep learning module was built through Keras API in TensorFlow 1.13, it will
 ### Directory Structure
 
 ```
-​```
 > code
 	> __init__.py
 	> config.ini
@@ -69,8 +68,6 @@ The deep learning module was built through Keras API in TensorFlow 1.13, it will
 generate_systems.py
 main_gpu.py
 README.md
-But let's throw in a <b>tag</b>.
-​```
 ```
 
 ## MCMC Module
