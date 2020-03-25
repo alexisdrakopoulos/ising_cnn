@@ -44,6 +44,8 @@ The deep learning module was built through Keras API in TensorFlow 1.13, it will
 
 ### Directory Structure
 
+The directory structure is not final. Currently the two main scripts are `main_gpu.py` for the CNN and `generate_systems.py` for MCMC. The directory structure can be changed by altering the relative paths within `config.ini`.
+
 ```
 > code
 	> __init__.py
@@ -70,6 +72,8 @@ main_gpu.py
 README.md
 ```
 
+
+
 ## MCMC Module
 
 The MCMC module is really the Metropolis-Hastings module. The core implementation can be found in `code/metropolis_ising.py` where the function `mcmc_ising` is a Metropolis-Hastings implementation of the 2D Isotropic Ising model with periodic boundary conditions.
@@ -77,5 +81,15 @@ The MCMC module is really the Metropolis-Hastings module. The core implementatio
 You should not really need to call this function directly, 
 
 ## CNN Module
+
+The CNN script `main_gpu.py` calls `model.py` in order to train the CNN. `main_gpu.py` passes args to `model.py` that are defined within it's docstring. These args can technically be passed manually, however this doesn't make much sense. `main_gpu.py` can easily be used to train an arbitrary number of models on single GPUs easily.
+
+For example during this project, a p3 instance with 4 V100s was used throughout the project, 4 tmux windows were opened and `main_gpu.py` was ran for each one with the argument of GPU ID passed (0 - 3 in this case).
+
+`main_gpu.py` will look within `data/models.csv` to find the configuration of the type of CNN you wish to train.
+
+A recommended workflow is to write all the different networks you wish to train in `data/models.csv` that are then separated by GPU. So for example a dozen per GPU were used, and these were then all automatically run and saved with no manual intervention being necessary.
+
+The models will be automatically saved to `data/models` in .h5 file formats, log files for loss history, and very importantly for the actual model (all arguments passed + date it was trained) are saved within `data/logs` in the aptly named folders.
 
 ## Theory, Questions that were asked/Answers
