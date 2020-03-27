@@ -1,6 +1,6 @@
 # CNN project for Ising model generated via MCMC
 
-This project was part of my BSc dissertation at the University of Strathclyde and continued over summer 2019 as a research project.
+This project was part of my BSc dissertation at the University of Strathclyde and continued over summer 2019 as a research project. The BSc dissertation is the `data/main_thesis.pdf`. There are typos that require errata, however this is the thesis as submitted.
 
 The project has two major components, the MCMC system generation and the actual CNN training, prediction and evaluation. This project was started with the goal of producing a paper on an overview of deep regression in late 2018/early 2019, however another paper came up [A Comprehensive Analysis of Deep Regression](https://ieeexplore.ieee.org/abstract/document/8686063/) which was not only far more expansive in its analysis but also had access to significantly more compute. It was however good to see that the same conclusions were drawn.
 
@@ -30,7 +30,7 @@ This would generate 5000 systems (and 10,000 .npy files), combine them, then com
 
 ## Configuration, Dependencies and Directory Structure
 
-This section discusses the `config.ini` file, as well as the folder structure that the project comes with and its behaviors in terms of filling the folder structure. Dependencies are also discussed.
+This section discusses the `config.ini` file, as well as the folder structure that the project comes with and its behaviours in terms of filling the folder structure. Dependencies are also discussed.
 
 ### Config File
 
@@ -67,6 +67,7 @@ The directory structure is not final. Currently the two main scripts are `main_g
 	> models
 	> predictions
 	models.csv
+	main_thesis.pdf
 generate_systems.py
 main_gpu.py
 README.md
